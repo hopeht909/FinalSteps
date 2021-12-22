@@ -67,9 +67,23 @@ class PeopleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieArray.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath)
         cell.textLabel?.text = movieArray[indexPath.row].name
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let peopleDetailsVC = storyboard?.instantiateViewController(withIdentifier: "PeopleDetails") as! PeopleDetails
+        
+        let item = movieArray[indexPath.row]
+        
+        peopleDetailsVC.name = item.name
+        peopleDetailsVC.birthYear = item.birthYear
+        peopleDetailsVC.mass = item.mass
+        peopleDetailsVC.gender = item.gender
+        
+        self.navigationController?.pushViewController(peopleDetailsVC, animated: true)
     }
 }

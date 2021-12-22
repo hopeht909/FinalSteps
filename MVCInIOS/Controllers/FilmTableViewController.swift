@@ -17,22 +17,22 @@ class FilmTableViewController: UITableViewController {
     struct filmCharacter {
         let title: String
         let director: String
-        let producer: String
-        let peningCrawl: String
+        let releaseDate: String
+        let openingCrawl: String
        
         
         init?(dict: [String: Any]){
             guard let title = dict["title"] as? String,
                   let director = dict["director"] as? String,
-                  let producer = dict["producer"] as? String,
-                  let peningCrawl = dict["opening_crawl"] as? String else {
+                  let releaseDate = dict["release_date"] as? String,
+                  let openingCrawl = dict["opening_crawl"] as? String else {
                       return nil
                   }
             
             self.title = title
             self.director = director
-            self.producer = producer
-            self.peningCrawl = peningCrawl
+            self.releaseDate = releaseDate
+            self.openingCrawl = openingCrawl
             
         }
     }
@@ -76,6 +76,20 @@ class FilmTableViewController: UITableViewController {
         
         cell.textLabel?.text = filmArray[indexPath.row].title
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let filmDetailsVC = storyboard?.instantiateViewController(withIdentifier: "FilmDetails") as! FilmDetails
+        
+        let item = filmArray[indexPath.row]
+        
+        filmDetailsVC.filmTitle = item.title
+        filmDetailsVC.director = item.director
+        filmDetailsVC.openingCrawl = item.openingCrawl
+        filmDetailsVC.releaseDate = item.releaseDate
+         
+        
+        self.navigationController?.pushViewController(filmDetailsVC, animated: true)
     }
     
 }

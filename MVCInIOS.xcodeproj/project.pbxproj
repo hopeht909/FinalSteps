@@ -16,6 +16,8 @@
 		84DEB92D277371BA0084ED5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DEB92B277371BA0084ED5C /* LaunchScreen.storyboard */; };
 		84DEB9352773A9FF0084ED5C /* FilmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB9342773A9FF0084ED5C /* FilmTableViewController.swift */; };
 		84DEB9392773ADA00084ED5C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB9382773ADA00084ED5C /* ApiManager.swift */; };
+		84DEB93B2773E3090084ED5C /* PeopleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB93A2773E3090084ED5C /* PeopleDetails.swift */; };
+		84DEB93D2773E31A0084ED5C /* FilmDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB93C2773E31A0084ED5C /* FilmDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		84DEB92E277371BA0084ED5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DEB9342773A9FF0084ED5C /* FilmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewController.swift; sourceTree = "<group>"; };
 		84DEB9382773ADA00084ED5C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		84DEB93A2773E3090084ED5C /* PeopleDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetails.swift; sourceTree = "<group>"; };
+		84DEB93C2773E31A0084ED5C /* FilmDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			children = (
 				84DEB9342773A9FF0084ED5C /* FilmTableViewController.swift */,
 				84DEB921277371B90084ED5C /* PeopleTableViewController.swift */,
+				84DEB93A2773E3090084ED5C /* PeopleDetails.swift */,
+				84DEB93C2773E31A0084ED5C /* FilmDetails.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			files = (
 				84DEB922277371B90084ED5C /* PeopleTableViewController.swift in Sources */,
 				84DEB928277371B90084ED5C /* MVCInIOS.xcdatamodeld in Sources */,
+				84DEB93D2773E31A0084ED5C /* FilmDetails.swift in Sources */,
 				84DEB91E277371B90084ED5C /* AppDelegate.swift in Sources */,
+				84DEB93B2773E3090084ED5C /* PeopleDetails.swift in Sources */,
 				84DEB920277371B90084ED5C /* SceneDelegate.swift in Sources */,
 				84DEB9392773ADA00084ED5C /* ApiManager.swift in Sources */,
 				84DEB9352773A9FF0084ED5C /* FilmTableViewController.swift in Sources */,
